@@ -1,0 +1,44 @@
+{
+  "english": {
+    "title": "Select a category",
+    "categories": {
+      "Payments": [
+        {
+          "q": "What payment methods are accepted?",
+          "a": "We accept VISA, MasterCard, and Cash on Delivery (COD)."
+        },
+        {
+          "q": "Is it safe to use my card?",
+          "a": "Yes, all our payments are processed through a secure gateway."
+        }
+      ],
+      "Delivery": [
+        {
+          "q": "How long does delivery take?",
+          "a": "Deliveries within Colombo take 1-2 business days. Outstation deliveries take 2-4 business days."
+        },
+        {
+          "q": "What are the delivery charges?",
+          "a": "A standard delivery fee of LKR 350 is charged for all orders."
+        }
+      ]
+    }
+  },
+  "sinhala": {
+    "title": "කාණ්ඩයක් තෝරන්න",
+    "categories": {
+      "ගෙවීම්": [
+        {
+          "q": "ගෙවීම් කළ හැකි ක්‍රම මොනවාද?",
+          "a": "අප VISA, MasterCard, සහ Cash on Delivery (COD) භාරගනු ලැබේ."
+        }
+      ],
+      "භාණ්ඩ බෙදාහැරීම": [
+        {
+          "q": "භාණ්ඩ ලැබීමට කොපමණ කල් යයිද?",
+          "a": "කොළඹ ඇතුළත දින 1-2ක් සහ අනෙකුත් ප්‍රදේශ සඳහා දින 2-4ක් ගතවේ."
+        }
+      ]
+    }
+  }
+}

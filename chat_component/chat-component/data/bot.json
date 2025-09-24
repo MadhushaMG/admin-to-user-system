@@ -1,0 +1,63 @@
+{
+  "startNode": "lang_select",
+  "nodes": {
+    "lang_select": {
+      "message": "Hi there! Welcome. Please select your language to continue.",
+      "options": [
+        { "text": "English", "nextNode": "main_menu_en" },
+        { "text": "සිංහල", "nextNode": "main_menu_si" }
+      ]
+    },
+    "main_menu_en": {
+      "message": "How can we help you today?",
+      "options": [
+        { "text": "Visa Consultation", "nextNode": "visa_info_en" },
+        { "text": "Service Charges", "nextNode": "pricing_info_en" },
+        { "text": "Talk to an Agent", "action": "start_chat" }
+      ]
+    },
+    "visa_info_en": {
+      "message": "We provide consultation for Student Visas and Work & Skilled Migration Visas. Which one are you interested in?",
+      "options": [
+        { "text": "Student Visa", "nextNode": "student_visa_en" },
+        { "text": "Work Visa", "nextNode": "work_visa_en" },
+        { "text": "Go Back", "nextNode": "main_menu_en" }
+      ]
+    },
+    "student_visa_en": {
+      "message": "Great! We can guide you through the entire application process. To connect with an expert, please select 'Talk to an Agent'.",
+      "options": [
+        { "text": "Talk to an Agent", "action": "start_chat" },
+        { "text": "Go Back", "nextNode": "visa_info_en" }
+      ]
+    },
+    "work_visa_en": {
+      "message": "We assist with work permits and skilled migration visas. To discuss your specific case, please select 'Talk to an Agent'.",
+      "options": [
+        { "text": "Talk to an Agent", "action": "start_chat" },
+        { "text": "Go Back", "nextNode": "visa_info_en" }
+      ]
+    },
+    "pricing_info_en": {
+      "message": "Our service charges vary depending on the service. For a detailed quotation, we recommend talking to an agent.",
+       "options": [
+        { "text": "Talk to an Agent", "action": "start_chat" },
+        { "text": "Main Menu", "nextNode": "main_menu_en" }
+      ]
+    },
+    "main_menu_si": {
+      "message": "අපි ඔබට සහය විය හැක්කේ කෙසේද?",
+      "options": [
+        { "text": "වීසා තොරතුරු", "nextNode": "visa_info_si" },
+        { "text": "නියෝජිතයෙකු හා සම්බන්ධ වන්න", "action": "start_chat" }
+      ]
+    },
+     "visa_info_si": {
+      "message": "අප ශිෂ්‍ය සහ රැකියා වීසා සඳහා උපදේශන සේවා සපයන්නෙමු.",
+      "options": [
+        { "text": "නියෝජිතයෙකු හා සම්බන්ධ වන්න", "action": "start_chat" },
+        { "text": "ප්‍රධාන මෙනුව", "nextNode": "main_menu_si" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "english": {
+    "title": "Select a category",
+    "categories": {
+      "Payments": [
+        {
+          "q": "What payment methods are accepted?",
+          "a": "We accept VISA, MasterCard, and Cash on Delivery (COD)."
+        }
+      ],
+      "Delivery": [
+        {
+          "q": "How long does delivery take?",
+          "a": "Deliveries within Colombo take 1-2 business days. Outstation deliveries take 2-4 business days."
+        }
+      ]
+    }
+  },
+  "sinhala": {
+    "title": "කාණ්ඩයක් තෝරන්න",
+    "categories": {
+      "ගෙවීම්": [
+        {
+          "q": "ගෙවීම් කළ හැකි ක්‍රම මොනවාද?",
+          "a": "අප VISA, MasterCard, සහ Cash on Delivery (COD) භාරගනු ලැබේ."
+        }
+      ]
+    }
+  }
+}

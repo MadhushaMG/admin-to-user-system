@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root {
+    --sidebar-bg: #1f2937; --content-bg: #f3f4f6; --panel-bg: #ffffff;
+    --text-light: #9ca3af; --text-dark: #111827; --primary-color: #4f46e5;
+    --border-color: #e5e7eb; --user-msg-bg: #ffffff; --admin-msg-bg: #4338ca;
+    --font-family: 'Inter', sans-serif;
+}
+body { font-family: var(--font-family); margin: 0; background-color: var(--content-bg); font-size: 16px; }
+.admin-inbox-container { display: flex; height: 100vh; }
+.inbox-sidebar { width: 220px; background: var(--sidebar-bg); color: var(--text-light); display: flex; flex-direction: column; flex-shrink: 0; }
+.sidebar-header { padding: 20px; font-size: 1.2em; font-weight: 600; color: #fff; }
+.sidebar-nav button { display: block; width: 100%; text-align: left; padding: 15px 20px; background: none; border: none; color: var(--text-light); font-size: 1em; cursor: pointer; border-left: 3px solid transparent; transition: all 0.2s ease; }
+.sidebar-nav button.active, .sidebar-nav button:hover { background-color: rgba(255,255,255, 0.05); color: #fff; border-left-color: var(--primary-color); }
+.inbox-main-content { flex-grow: 1; display: flex; overflow: hidden; }
+.inbox-view { display: none; width: 100%; }
+.inbox-view.active { display: flex; }
+.chat-list-panel { width: 320px; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; background: var(--panel-bg); }
+.chat-main-panel { flex-grow: 1; display: flex; flex-direction: column; position: relative; background-color: #f9fafb; }
+.user-info-panel { width: 280px; border-left: 1px solid var(--border-color); background: var(--panel-bg); padding: 20px; overflow-y: auto; flex-shrink: 0;}
+.user-info-panel h4 { margin-top: 0; color: var(--text-dark); }
+.user-info-panel p { font-size: 0.9em; color: #6b7280; line-height: 1.6; word-wrap: break-word; }
+.user-info-panel strong { color: var(--text-dark); }
+.panel-header { padding: 15px 20px; background-color: var(--panel-bg); border-bottom: 1px solid var(--border-color); font-weight: 600; }
+#chat-list { overflow-y: auto; flex-grow: 1; }
+.chat-list-item { padding: 15px 20px; border-bottom: 1px solid var(--border-color); cursor: pointer; position: relative; }
+.chat-list-item.active { background-color: var(--primary-color); color: #fff; }
+.chat-list-item.active small, .chat-list-item.active .user-name { color: #fff; }
+
+.chat-list-item.has-unread .user-name { font-weight: 700; color: var(--text-dark); }
+.unread-dot {
+    position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
+    width: 10px; height: 10px; background-color: var(--primary-color); border-radius: 50%;
+}
+.new-messages-divider {
+    width: 100%; text-align: center; margin: 15px 0; font-size: 0.8em;
+    font-weight: 600; color: var(--primary-color); display: flex; align-items: center;
+}
+.new-messages-divider::before, .new-messages-divider::after {
+    content: ''; flex: 1; border-bottom: 1px solid var(--border-color);
+}
+.new-messages-divider span { padding: 0 10px; }
+#chat-messages { flex-grow: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
+.message-container { display: flex; max-width: 80%; align-items: flex-end; gap: 10px; }
+.message-avatar { width: 40px; height: 40px; border-radius: 50%; background-color: #d1d5db; color: #4b5563; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; }
+.message-content-wrapper { display: flex; flex-direction: column; }
+.message-bubble { padding: 12px 16px; border-radius: 18px; line-height: 1.5; word-wrap: break-word; }
+.message-time { font-size: 0.75em; color: #6b7280; margin-top: 5px; }
+.sender-user { align-self: flex-start; }
+.sender-user .message-bubble { background-color: var(--user-msg-bg); color: var(--text-dark); border: 1px solid var(--border-color); border-bottom-left-radius: 5px; }
+.sender-user .message-time { text-align: left; }
+.sender-admin { align-self: flex-end; flex-direction: row-reverse; }
+.sender-admin .message-avatar { margin-left: 10px; margin-right: 0; background-color: var(--primary-color); color: #fff; }
+.sender-admin .message-bubble { background-color: var(--admin-msg-bg); color: #fff; border-bottom-right-radius: 5px; }
+.sender-admin .message-time { text-align: right; }
+#reply-area { padding: 15px; border-top: 1px solid var(--border-color); background: var(--panel-bg); position: relative; }
+#reply-area textarea { width: 100%; box-sizing: border-box; border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 50px 10px 15px; font-family: var(--font-family); font-size: 1em; resize: vertical; }
+#reply-btn { background: var(--primary-color); color: #fff; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; float: right; }
+#emoji-btn { position: absolute; right: 85px; top: 28px; background: none; border: none; font-size: 1.5em; cursor: pointer; color: #6b7280; }
+emoji-picker { position: absolute; right: 20px; bottom: 120px; z-index: 100; }
+
+.faq-manager { padding: 20px; width: 100%; overflow-y: auto; }
+.faq-manager .faq-toolbar { margin-bottom: 20px; }
+.faq-manager button { background: var(--primary-color); color: #fff; border:none; padding: 8px 12px; border-radius:5px; cursor: pointer; margin-right:10px; }
+.faq-tree details { border-left: 2px solid var(--border-color); padding-left: 15px; margin-bottom: 10px; }
+.faq-tree summary { cursor: pointer; font-weight: 600; padding: 5px; list-style: none; }
+.faq-tree summary::before { content: '▶'; margin-right: 8px; }
+.faq-tree details[open] > summary::before { content: '▼'; }
+.faq-item { border: 1px solid var(--border-color); border-radius: 5px; padding: 15px; margin: 10px 0; background: #fff; }
+.faq-item label { display: block; margin-bottom: 5px; font-weight: 500; font-size: 0.9em; }
+.faq-item input, .faq-item textarea { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; }
+.delete-btn { color: #ef4444; font-size: 0.8em; cursor: pointer; margin-left: 10px; background:none; border:none; padding:0; }
